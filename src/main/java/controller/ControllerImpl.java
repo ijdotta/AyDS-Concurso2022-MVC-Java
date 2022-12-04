@@ -9,19 +9,13 @@ public class ControllerImpl implements Controller {
 
     private final Model model;
 
-    private final Observer<UiEvent> observer = value -> {
-        switch (value) {
-            case FETCH_QUOTE -> randomQuote();
-        }
-    };
+    // TODO: observer of ui events
 
     public ControllerImpl(View view, Model model) {
         this.model = model;
-        view.getUiEventObservable().suscribe(observer);
+        // TODO suscribe observer to ui
     }
 
-    private void randomQuote() {
-        model.fetchQuote();
-    }
+    // TODO: handle observed ui events
 
 }

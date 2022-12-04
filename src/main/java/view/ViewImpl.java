@@ -22,12 +22,11 @@ public class ViewImpl implements View {
     }
 
     private void notifyFetchQuoteAction() {
-        onActionSubject.notify(UiEvent.FETCH_QUOTE);
+        // TODO: notify observers
     }
 
     private void initObservers() {
-        ModelInjector.getInstance().getModel()
-                .getSimpsonsQuoteObservable().suscribe(this::updateQuote);
+        // TODO: suscribe to model and handle events
     }
 
     private void updateQuote(SimpsonsQuote quote) {

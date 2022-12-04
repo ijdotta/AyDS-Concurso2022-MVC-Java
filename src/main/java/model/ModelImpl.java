@@ -17,7 +17,6 @@ public class ModelImpl implements Model {
 
     @Override
     public void fetchQuote() {
-        SimpsonsQuote quote = simpsonsService.getQuote();
-        simpsonsQuoteObservable.notify(quote);
+        // TODO: get quote and notify
     }
 }
